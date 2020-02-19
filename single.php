@@ -130,7 +130,7 @@ json_encode($arrayData);
 echo json_encode($arrayData);
 json_encode('movies_rating.txt');
 
-$avg_rating_movies=average_rating(/*$avg_rating,*/ $movie->id);
+$avg_rating_movies=average_rating($movie->id);
 
 echo($avg_rating_movies);
 //echo 'test';

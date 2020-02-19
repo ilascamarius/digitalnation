@@ -21,10 +21,14 @@ $query="INSERT INTO movies (id_movie, rating) VALUES('$id_movie', '$rating')";
     mysqli_query($link, $query);
 }
 
-function average_rating(/*$avg_rating,*/ $movie_id){
+function average_rating($movie_id){
     $link=db_connect();
     $query="SELECT AVG(rating) 'avg_rating' FROM movies WHERE id_movie = '$movie_id'; ";
+    print_r($query) ;
     mysqli_query($link, $query);
+    print_r(mysqli_query($link, $query)) ;
 }
+
+// https://www.mysqltutorial.org/mysql-avg/
 
 ?>
